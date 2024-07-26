@@ -10,28 +10,32 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
-    <!-- <style>
-      .swiper {
-        width: 100%;
-        height: 100%;
-      }
-  
-      .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background: #fff;
+    <style>
+      .swiper-button-next,
+      .swiper-button-prev {
+        color: #000000;
+        background-color: #9a9a9a5b;
+        padding: 10px;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        top: 44%;
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s ease;
       }
-  
-      .swiper-slide img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+
+      .swiper-button-next:hover,
+      .swiper-button-prev:hover {
+        background-color: #cecece;
       }
-    </style> -->
+
+      .swiper-button-next:after,
+      .swiper-button-prev:after {
+        font-size: 12px;
+      }
+    </style>
   </head>
   <body>
     <!-- Header Start -->
@@ -289,43 +293,167 @@
       <div class="container">
         <div class="px-4">
           <h4 class="text-base font-semibold">My Portfolio</h4>
-          <h2 class="text-4xl font-bold">Latest Project</h2>
+          <h2 class="text-4xl font-bold">
+            Latest <span class="text-primary">Project</span>
+          </h2>
         </div>
 
         <!-- Swiper -->
-        <div class="swiper mySwiper mt-36 bg-slate-300">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="public/img/poto1.jpeg" alt="Image 1" />
-              <!-- Optional: Add caption or additional content here -->
+        <div class="px-4">
+          <div class="swiper mySwiper mt-12">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div
+                  class="bg-white rounded-t-md shadow-md overflow-hidden mb-10"
+                >
+                  <div class="relative w-full h-72">
+                    <!-- Fixed height container -->
+                    <img
+                      src="public/img/poto1.jpeg"
+                      alt="poto 1"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div class="py-4 px-6">
+                    <h3 class="text-left truncate">
+                      <a
+                        href="#"
+                        class="block mb-1 font-semibold text-2xl hover:text-primary"
+                        >Babequ App</a
+                      >
+                    </h3>
+                    <p
+                      class="text-left font-medium text-base text-slate-500 mb-1"
+                    >
+                      Build with Laravel
+                    </p>
+                    <p class="text-left">
+                      <a
+                        href="#"
+                        class="text-left font-medium text-sm underline decoration-2 decoration-primary underline-offset-8 text-black bg-white py-3 rounded-lg hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out"
+                        >View Portfolio</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="bg-white rounded-t-md shadow-md overflow-hidden mb-10"
+                >
+                  <div class="relative w-full h-72">
+                    <!-- Fixed height container -->
+                    <img
+                      src="public/img/about-me.png"
+                      alt="poto 1"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div class="py-4 px-6">
+                    <h3 class="text-left truncate">
+                      <a
+                        href="#"
+                        class="block mb-1 font-semibold text-2xl hover:text-primary"
+                        >Babequ App</a
+                      >
+                    </h3>
+                    <p
+                      class="text-left font-medium text-base text-slate-500 mb-1"
+                    >
+                      Build with Laravel
+                    </p>
+                    <p class="text-left">
+                      <a
+                        href="#"
+                        class="text-left font-medium text-sm underline decoration-2 decoration-primary underline-offset-8 text-black bg-white py-3 rounded-lg hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out"
+                        >View Portfolio</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="bg-white rounded-t-md shadow-md overflow-hidden mb-10"
+                >
+                  <div class="relative w-full h-72">
+                    <!-- Fixed height container -->
+                    <img
+                      src="public/img/Group 9064.png"
+                      alt="poto 1"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div class="py-4 px-6">
+                    <h3 class="text-left truncate">
+                      <a
+                        href="#"
+                        class="block mb-1 font-semibold text-2xl hover:text-primary"
+                        >Babequ App</a
+                      >
+                    </h3>
+                    <p
+                      class="text-left font-medium text-base text-slate-500 mb-1"
+                    >
+                      Build with Laravel
+                    </p>
+                    <p class="text-left">
+                      <a
+                        href="#"
+                        class="text-left font-medium text-sm underline decoration-2 decoration-primary underline-offset-8 text-black bg-white py-3 rounded-lg hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out"
+                        >View Portfolio</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="bg-white rounded-t-md shadow-md overflow-hidden mb-10"
+                >
+                  <div class="relative w-full h-72">
+                    <img
+                      src="public/img/image2.jpeg"
+                      alt="poto 1"
+                      class="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div class="py-4 px-6">
+                    <h3 class="text-left truncate">
+                      <a
+                        href="#"
+                        class="block mb-1 font-semibold text-2xl hover:text-primary"
+                        >Babequ App</a
+                      >
+                    </h3>
+                    <p
+                      class="text-left font-medium text-base text-slate-500 mb-1"
+                    >
+                      Build with Laravel
+                    </p>
+                    <p class="text-left">
+                      <a
+                        href="#"
+                        class="text-left font-medium text-sm underline decoration-2 decoration-primary underline-offset-8 text-black bg-white py-3 rounded-lg hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out"
+                        >View Portfolio</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="swiper-slide">
-              <img src="public/img/Group 9064.png" alt="Image 2" />
-              <!-- Optional: Add caption or additional content here -->
-            </div>
-            <div class="swiper-slide">
-              <img src="public/img/image2.jpeg" alt="Image 3" />
-              <!-- Optional: Add caption or additional content here -->
-            </div>
-            <!-- Add more swiper-slide divs as needed -->
-            <div class="swiper-slide">
-              <img src="public/img/about-me.png" alt="Image 3" />
-              <!-- Optional: Add caption or additional content here -->
-            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
           </div>
-
-          <!-- Pagination -->
-          <div class="swiper-pagination"></div>
-
-          <!-- Navigation Buttons -->
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
         </div>
         <!-- End Swiper -->
       </div>
     </section>
     <!-- Portfolio Section End -->
 
+    <script src="src/js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
       var swiper = new Swiper(".mySwiper", {
