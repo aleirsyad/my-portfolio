@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="src/output.css" rel="stylesheet" />
+    <title>Portofolio Website</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- <style>
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+  
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+  
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style> -->
+  </head>
+  <body>
+    <!-- Header Start -->
+    <header
+      class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10"
+    >
+      <div class="container">
+        <div class="flex items-center justify-between relative">
+          <div class="px-4">
+            <a href="#home" class="font-bold text-lg text-primary block py-6"
+              >Aleirsyad</a
+            >
+          </div>
+          <div class="flex items-center px-4">
+            <button
+              id="hamburger"
+              name="hamburger"
+              type="button"
+              class="block absolute right-4 lg:hidden"
+            >
+              <span
+                class="hamburger-line transition duration-300 ease-in-out origin-top-left"
+              ></span>
+              <span
+                class="hamburger-line transition duration-300 ease-in-out"
+              ></span>
+              <span
+                class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"
+              ></span>
+            </button>
+            <nav
+              id="nav-menu"
+              class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none"
+            >
+              <ul class="block lg:flex">
+                <li class="group">
+                  <a
+                    href="#home"
+                    class="text-base text-black py-2 mx-8 flex group-hover:text-primary"
+                    >Home</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#about"
+                    class="text-base text-black py-2 mx-8 flex group-hover:text-primary"
+                    >About Me</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#portfolio"
+                    class="text-base text-black py-2 mx-8 flex group-hover:text-primary"
+                    >Portfolio</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#work"
+                    class="text-base text-black py-2 mx-8 flex group-hover:text-primary"
+                    >Work Experience</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#contact"
+                    class="text-base text-black py-2 mx-8 flex group-hover:text-primary"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Hero Section Start -->
+    <section id="home" class="pt-10">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="w-full self-center px-4 lg:w-1/2 mt-28">
+            <h1 class="text-base font-semibold text-black lg:text-lg">
+              Hey, I am Ale Irsyad 👋
+            </h1>
+            <h2 class="text-4xl font-bold mb-2 lg:text-5xl">
+              Fullstack <span class="text-primary">Developer</span>
+            </h2>
+            <p class="font-medium mb-2 lg:text-lg">Who am I? 👨‍💻</p>
+            <p class="font-medium leading-relaxed mb-8">
+              Hi, I am a UI/UX Designer & Product Designer from Jakarta,
+              Indonesia 🇮🇩. I have 3+ years experience in designing digital
+              products that creating happy experiences user and help achieving
+              business goals.
+            </p>
+
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="text-base font-semibold text-white bg-primary py-3 px-3 rounded-lg hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out"
+                >Contact Me</a
+              >
+              <a
+                href="#"
+                class="text-base font-semibold underline decoration-2 decoration-primary underline-offset-8 text-black bg-white py-3 px-3 rounded-lg hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out"
+                >View Portfolio</a
+              >
+            </div>
+          </div>
+
+          <div class="w-full self-end px-4 lg:w-1/2">
+            <div class="mt-10">
+              <img
+                src="public/img/Group 9064.png"
+                alt="Irsyad"
+                class="max-w-full mx-auto"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- Skill Section Start -->
+    <section id="skill" class="pt-24">
+      <div class="container mx-auto">
+        <div class="flex flex-wrap lg:flex-nowrap justify-between items-center">
+          <div class="w-full lg:w-2/5 px-4 mb-4 lg:mb-0">
+            <h4 class="text-base font-semibold">My Skills</h4>
+            <h2 class="text-2xl font-bold lg:text-4xl">
+              Why Hire Me For Your <br />
+              Next
+              <span class="text-primary">Project?</span>
+            </h2>
+          </div>
+          <div
+            class="w-full lg:w-3/5 px-4 mt-1 grid grid-cols-3 gap-3 justify-between lg:justify-end"
+          >
+            <div
+              class="w-auto bg-slate-200 py-3 px-4 mb-4 lg:mb-0 lg:ml-4 hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1"
+                stroke="currentColor"
+                class="size-7 text-primary"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25"
+                />
+              </svg>
+
+              <h2 class="text-lg font-semibold">Web Development</h2>
+              <p>
+                Create Web App using <br />
+                several framework
+              </p>
+            </div>
+            <div
+              class="w-auto bg-slate-200 py-3 px-4 mb-4 lg:mb-0 lg:ml-4 hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-7 text-primary"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"
+                />
+              </svg>
+
+              <h2 class="text-lg font-semibold">Mobile Development</h2>
+              <p>Create Mobile App using <br />several framework</p>
+            </div>
+            <div
+              class="w-auto bg-slate-200 py-3 px-4 mb-4 lg:mb-0 lg:ml-4 hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-7 text-primary"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125"
+                />
+              </svg>
+
+              <h2 class="text-lg font-semibold">Database Design</h2>
+              <p>
+                Create Web App using <br />
+                several framework
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Skill Section End -->
+
+    <!-- About Section Start -->
+    <section id="about" class="pt-20">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="w-full self-end px-4 lg:w-1/2">
+            <div class="mt-10">
+              <img
+                src="public/img/about-me.png"
+                alt="Irsyad"
+                class="max-w-full mx-auto"
+              />
+            </div>
+          </div>
+          <div class="w-full self-center px-4 lg:w-1/2 mt-12">
+            <h1 class="text-base font-semibold text-black lg:text-lg">About</h1>
+            <h2 class="text-2xl text-primary font-bold mb-2 lg:text-4xl">
+              About me
+            </h2>
+            <!-- <p class="font-medium mb-2 lg:text-lg">Who am I? 👨‍💻</p> -->
+            <p class="font-medium leading-relaxed mb-8">
+              Hi, I am a UI/UX Designer & Product Designer from Jakarta,
+              Indonesia 🇮🇩. I have 3+ years experience in designing digital
+              products that creating happy experiences user and help achieving
+              business goals.
+              <br />
+              <br />
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+              varius faucibus massa sollicitudin amet augue. Nibh metus a semper
+              purus mauris duis. Lorem eu neque, tristique quis duis. Nibh
+              scelerisque ac adipiscing velit non nulla in amet pellentesque.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About Section End -->
+
+    <!-- Portfolio Section Start -->
+    <section id="portfolio" class="pt-4 lg:pt-16 pb-36">
+      <div class="container">
+        <div class="px-4">
+          <h4 class="text-base font-semibold">My Portfolio</h4>
+          <h2 class="text-4xl font-bold">Latest Project</h2>
+        </div>
+
+        <!-- Swiper -->
+        <div class="swiper mySwiper mt-36 bg-slate-300">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="public/img/poto1.jpeg" alt="Image 1" />
+              <!-- Optional: Add caption or additional content here -->
+            </div>
+            <div class="swiper-slide">
+              <img src="public/img/Group 9064.png" alt="Image 2" />
+              <!-- Optional: Add caption or additional content here -->
+            </div>
+            <div class="swiper-slide">
+              <img src="public/img/image2.jpeg" alt="Image 3" />
+              <!-- Optional: Add caption or additional content here -->
+            </div>
+            <!-- Add more swiper-slide divs as needed -->
+            <div class="swiper-slide">
+              <img src="public/img/about-me.png" alt="Image 3" />
+              <!-- Optional: Add caption or additional content here -->
+            </div>
+          </div>
+
+          <!-- Pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- Navigation Buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+        <!-- End Swiper -->
+      </div>
+    </section>
+    <!-- Portfolio Section End -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        slidesPerView: 2,
+        spaceBetween: 10,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
