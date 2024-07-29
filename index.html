@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="src/output.css" rel="stylesheet" />
-    <title>Portofolio Website</title>
+    <link href="dist/css/final.css" rel="stylesheet" />
+    <title>Ale Irsyad Portfolio</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -36,16 +36,27 @@
         font-size: 12px;
       }
     </style>
+    <script>
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
   </head>
   <body>
     <!-- Header Section Start -->
     <header
-      class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10"
+      class="absolute left-0 top-0 z-10 flex w-full items-center bg-transparent"
     >
       <div class="container">
-        <div class="flex items-center justify-between relative">
+        <div class="relative flex items-center justify-between">
           <div class="px-4">
-            <a href="#home" class="font-bold text-lg text-primary block py-6"
+            <a href="#home" class="block py-6 text-lg font-bold text-primary"
               >Aleirsyad</a
             >
           </div>
@@ -54,57 +65,73 @@
               id="hamburger"
               name="hamburger"
               type="button"
-              class="block absolute right-4 lg:hidden"
+              class="absolute right-4 block lg:hidden"
             >
               <span
-                class="hamburger-line transition duration-300 ease-in-out origin-top-left"
+                class="hamburger-line origin-top-left transition duration-300 ease-in-out"
               ></span>
               <span
                 class="hamburger-line transition duration-300 ease-in-out"
               ></span>
               <span
-                class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"
+                class="hamburger-line origin-bottom-left transition duration-300 ease-in-out"
               ></span>
             </button>
             <nav
               id="nav-menu"
-              class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none"
+              class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none dark:bg-gray-900 dark:shadow-slate-700 lg:dark:bg-transparent"
             >
               <ul class="block lg:flex">
                 <li class="group">
                   <a
                     href="#home"
-                    class="text-base text-black py-2 mx-8 flex group-hover:text-primary"
+                    class="mx-8 flex py-2 text-base text-black group-hover:text-primary dark:text-white"
                     >Home</a
                   >
                 </li>
                 <li class="group">
                   <a
                     href="#about"
-                    class="text-base text-black py-2 mx-8 flex group-hover:text-primary"
+                    class="mx-8 flex py-2 text-base text-black group-hover:text-primary dark:text-white"
                     >About Me</a
                   >
                 </li>
                 <li class="group">
                   <a
                     href="#portfolio"
-                    class="text-base text-black py-2 mx-8 flex group-hover:text-primary"
+                    class="mx-8 flex py-2 text-base text-black group-hover:text-primary dark:text-white"
                     >Portfolio</a
                   >
                 </li>
                 <li class="group">
                   <a
                     href="#work"
-                    class="text-base text-black py-2 mx-8 flex group-hover:text-primary"
+                    class="mx-8 flex py-2 text-base text-black group-hover:text-primary dark:text-white"
                     >Work Experience</a
                   >
                 </li>
                 <li class="group">
                   <a
                     href="#contact"
-                    class="text-base text-black py-2 mx-8 flex group-hover:text-primary"
+                    class="mx-8 flex py-2 text-base text-black group-hover:text-primary dark:text-white"
                     >Contact</a
                   >
+                </li>
+                <li class="mt-2 flex items-center pl-8 lg:mt-0">
+                  <div class="flex">
+                    <span class="mr-2 text-sm text-slate-500">light</span>
+                    <input type="checkbox" class="hidden" id="dark-toggle" />
+                    <label for="dark-toggle">
+                      <div
+                        class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1"
+                      >
+                        <div
+                          class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out"
+                        ></div>
+                      </div>
+                    </label>
+                    <span class="ml-2 text-sm text-slate-500">dark</span>
+                  </div>
                 </li>
               </ul>
             </nav>
@@ -115,18 +142,22 @@
     <!-- Header Section End -->
 
     <!-- Hero Section Start -->
-    <section id="home" class="pt-10">
+    <section id="home" class="bg-gray-50 pb-10 pt-10 dark:bg-gray-900">
       <div class="container">
         <div class="flex flex-wrap">
-          <div class="w-full self-center px-4 lg:w-1/2 mt-28">
-            <h1 class="text-base font-semibold text-black lg:text-lg">
+          <div class="mt-28 w-full self-center px-4 lg:w-1/2">
+            <h1
+              class="text-base font-semibold text-black lg:text-lg dark:text-white"
+            >
               Hey, I am Ale Irsyad 👋
             </h1>
-            <h2 class="text-4xl font-bold mb-2 lg:text-5xl">
+            <h2 class="mb-2 text-4xl font-bold lg:text-5xl dark:text-white">
               Fullstack <span class="text-primary">Developer</span>
             </h2>
-            <p class="font-medium mb-2 lg:text-lg">Who am I? 👨‍💻</p>
-            <p class="font-medium leading-relaxed mb-8">
+            <p class="mb-2 font-medium lg:text-lg dark:text-white">
+              Who am I? 👨‍💻
+            </p>
+            <p class="mb-8 font-medium leading-relaxed dark:text-white">
               Hi, I am a UI/UX Designer & Product Designer from Jakarta,
               Indonesia 🇮🇩. I have 3+ years experience in designing digital
               products that creating happy experiences user and help achieving
@@ -136,12 +167,12 @@
             <div class="flex space-x-4">
               <a
                 href="#"
-                class="text-base font-semibold text-white bg-primary py-3 px-3 rounded-lg hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out"
+                class="rounded-lg bg-primary px-3 py-3 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg"
                 >Contact Me</a
               >
               <a
                 href="#"
-                class="text-base font-semibold underline decoration-2 decoration-primary underline-offset-8 text-black bg-white py-3 px-3 rounded-lg hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out"
+                class="rounded-lg bg-transparent px-3 py-3 text-base font-semibold text-black underline decoration-primary decoration-2 underline-offset-8 transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg dark:text-white"
                 >View Portfolio</a
               >
             </div>
@@ -152,7 +183,7 @@
               <img
                 src="public/img/Group 9064.png"
                 alt="Irsyad"
-                class="max-w-full mx-auto"
+                class="mx-auto max-w-full"
               />
             </div>
           </div>
@@ -162,22 +193,22 @@
     <!-- Hero Section End -->
 
     <!-- Skill Section Start -->
-    <section id="skill" class="pt-24">
+    <section id="skill" class="pb-20 pt-20 dark:bg-gray-950">
       <div class="container mx-auto">
-        <div class="flex flex-wrap lg:flex-nowrap justify-between items-center">
-          <div class="w-full lg:w-2/5 px-4 mb-4 lg:mb-0">
-            <h4 class="text-base font-semibold">My Skills</h4>
-            <h2 class="text-2xl font-bold lg:text-4xl">
+        <div class="flex flex-wrap items-center justify-between lg:flex-nowrap">
+          <div class="mb-4 w-full px-4 lg:mb-0 lg:w-2/5">
+            <h4 class="text-base font-semibold dark:text-white">My Skills</h4>
+            <h2 class="text-2xl font-bold lg:text-4xl dark:text-white">
               Why Hire Me For Your <br />
               Next
               <span class="text-primary">Project?</span>
             </h2>
           </div>
           <div
-            class="w-full lg:w-3/5 px-4 mt-1 grid grid-cols-3 gap-3 justify-between lg:justify-end"
+            class="mt-1 grid w-full grid-cols-3 justify-between gap-3 px-4 lg:w-3/5 lg:justify-end"
           >
             <div
-              class="max-w-72 rounded-lg bg-slate-200 py-3 px-2 mb-4 lg:mb-0 lg:ml-4 hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out"
+              class="mb-4 max-w-72 rounded-lg bg-gray-100 px-2 py-3 transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg lg:mb-0 lg:ml-4 dark:bg-gray-900"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -195,16 +226,16 @@
               </svg>
 
               <h2
-                class="text-lg font-semibold tracking-tighter overflow-hidden lg:tracking-normal"
+                class="overflow-hidden text-lg font-semibold tracking-tighter lg:tracking-normal dark:text-white"
               >
                 Web Development
               </h2>
-              <p class="text-md tracking-tighter">
+              <p class="text-md tracking-tighter dark:text-white">
                 Create Web App using several framework
               </p>
             </div>
             <div
-              class="max-w-72 rounded-lg bg-slate-200 py-3 px-2 mb-4 lg:mb-0 lg:ml-4 hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out"
+              class="mb-4 max-w-72 rounded-lg bg-gray-100 px-2 py-3 transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg lg:mb-0 lg:ml-4 dark:bg-gray-900"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -222,16 +253,16 @@
               </svg>
 
               <h2
-                class="text-lg font-semibold tracking-tighter overflow-hidden lg:tracking-normal"
+                class="overflow-hidden text-lg font-semibold tracking-tighter lg:tracking-normal dark:text-white"
               >
                 Mobile Development
               </h2>
-              <p class="tracking-tighter">
+              <p class="tracking-tighter dark:text-white">
                 Create Mobile App using several framework
               </p>
             </div>
             <div
-              class="max-w-72 rounded-lg bg-slate-200 py-3 px-2 mb-4 lg:mb-0 lg:ml-4 hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out"
+              class="mb-4 max-w-72 rounded-lg bg-gray-100 px-2 py-3 transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg lg:mb-0 lg:ml-4 dark:bg-gray-900"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -249,11 +280,11 @@
               </svg>
 
               <h2
-                class="text-lg font-semibold tracking-tighter overflow-hidden lg:tracking-normal"
+                class="overflow-hidden text-lg font-semibold tracking-tighter lg:tracking-normal dark:text-white"
               >
                 Database Design
               </h2>
-              <p class="tracking-tighter">
+              <p class="tracking-tighter dark:text-white">
                 Create Web App using several framework
               </p>
             </div>
@@ -264,7 +295,7 @@
     <!-- Skill Section End -->
 
     <!-- About Section Start -->
-    <section id="about" class="pt-20">
+    <section id="about" class="bg-gray-50 pb-20 pt-20 dark:bg-gray-900">
       <div class="container">
         <div class="flex flex-wrap">
           <div class="w-full self-end px-4 lg:w-1/2">
@@ -272,17 +303,23 @@
               <img
                 src="public/img/about-me.png"
                 alt="Irsyad"
-                class="max-w-full mx-auto"
+                class="mx-auto max-w-full"
               />
             </div>
           </div>
-          <div class="w-full self-center px-4 lg:w-1/2 mt-12">
-            <h1 class="text-base font-semibold text-black lg:text-lg">About</h1>
-            <h2 class="text-2xl text-primary font-bold mb-2 lg:text-4xl">
+          <div class="mt-12 w-full self-center px-4 lg:w-1/2">
+            <h1
+              class="text-base font-semibold text-black lg:text-lg dark:text-white"
+            >
+              About
+            </h1>
+            <h2 class="mb-2 text-2xl font-bold text-primary lg:text-4xl">
               About me
             </h2>
             <!-- <p class="font-medium mb-2 lg:text-lg">Who am I? 👨‍💻</p> -->
-            <p class="font-medium leading-relaxed mb-8 tracking-tight">
+            <p
+              class="mb-8 font-medium leading-relaxed tracking-tight dark:text-white"
+            >
               Hi, I am a UI/UX Designer & Product Designer from Jakarta,
               Indonesia 🇮🇩. I have 3+ years experience in designing digital
               products that creating happy experiences user and help achieving
@@ -301,11 +338,11 @@
     <!-- About Section End -->
 
     <!-- Portfolio Section Start -->
-    <section id="portfolio" class="pt-4 lg:pt-16 pb-11">
+    <section id="portfolio" class="pb-20 pt-20 lg:pt-16 dark:bg-gray-950">
       <div class="container">
         <div class="px-4">
-          <h4 class="text-base font-semibold">My Portfolio</h4>
-          <h2 class="text-4xl font-bold">
+          <h4 class="text-base font-semibold dark:text-white">My Portfolio</h4>
+          <h2 class="text-4xl font-bold dark:text-white">
             Latest <span class="text-primary">Project</span>
           </h2>
         </div>
@@ -314,139 +351,140 @@
         <div class="px-4">
           <div class="swiper mySwiper mt-12">
             <div class="swiper-wrapper">
-              <div class="swiper-slide">
+              <div class="swiper-slide dark:bg-gray-900">
                 <div
-                  class="bg-white rounded-t-md shadow-md overflow-hidden mb-10"
+                  class="overflow-clip rounded-t-md shadow-md dark:shadow-gray-800"
                 >
-                  <div class="flex w-full h-36 md:h-64 lg:h-72">
+                  <div class="flex h-36 w-full bg-black md:h-64 lg:h-72">
                     <!-- Fixed height container -->
                     <img
                       src="public/img/poto1.jpeg"
                       alt="poto 1"
-                      class="w-full h-full object-cover"
+                      class="h-full w-full object-cover"
                     />
                   </div>
-                  <div class="py-4 px-6">
-                    <h3 class="text-left truncate">
+                  <div class="px-6 py-4 dark:bg-gray-900">
+                    <h3 class="truncate text-left">
                       <a
                         href="#"
-                        class="block mb-1 font-semibold text-2xl hover:text-primary"
+                        class="mb-1 block text-2xl font-semibold hover:text-primary dark:text-white dark:hover:text-primary"
                         >Babequ App</a
                       >
                     </h3>
                     <p
-                      class="text-left font-medium text-base text-slate-500 mb-1"
+                      class="mb-1 text-left text-base font-medium text-slate-500 dark:text-white"
                     >
                       Build with Laravel
                     </p>
                     <p class="text-left">
                       <a
                         href="#"
-                        class="text-left font-medium text-sm underline decoration-2 decoration-primary underline-offset-8 text-black bg-white py-3 rounded-lg hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out"
+                        class="rounded-lg bg-transparent py-3 text-left text-sm font-medium text-black underline decoration-primary decoration-2 underline-offset-8 transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg dark:text-white"
                         >View Portfolio</a
                       >
                     </p>
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide">
+              <div class="swiper-slide dark:bg-gray-900">
                 <div
-                  class="bg-white rounded-t-md shadow-md overflow-hidden mb-10"
+                  class="overflow-clip rounded-t-md shadow-md dark:shadow-gray-800"
                 >
-                  <div class="relative w-full h-36 md:h-64 lg:h-72">
+                  <div class="flex h-36 w-full bg-black md:h-64 lg:h-72">
                     <!-- Fixed height container -->
                     <img
                       src="public/img/about-me.png"
                       alt="poto 1"
-                      class="w-full h-full object-cover"
+                      class="h-full w-full object-cover"
                     />
                   </div>
-                  <div class="py-4 px-6">
-                    <h3 class="text-left truncate">
+                  <div class="px-6 py-4 dark:bg-gray-900">
+                    <h3 class="truncate text-left">
                       <a
                         href="#"
-                        class="block mb-1 font-semibold text-2xl hover:text-primary"
+                        class="mb-1 block text-2xl font-semibold hover:text-primary dark:text-white dark:hover:text-primary"
                         >Babequ App</a
                       >
                     </h3>
                     <p
-                      class="text-left font-medium text-base text-slate-500 mb-1"
+                      class="mb-1 text-left text-base font-medium text-slate-500 dark:text-white"
                     >
                       Build with Laravel
                     </p>
                     <p class="text-left">
                       <a
                         href="#"
-                        class="text-left font-medium text-sm underline decoration-2 decoration-primary underline-offset-8 text-black bg-white py-3 rounded-lg hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out"
+                        class="rounded-lg bg-transparent py-3 text-left text-sm font-medium text-black underline decoration-primary decoration-2 underline-offset-8 transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg dark:text-white"
                         >View Portfolio</a
                       >
                     </p>
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide">
+              <div class="swiper-slide dark:bg-gray-900">
                 <div
-                  class="bg-white rounded-t-md shadow-md overflow-hidden mb-10"
+                  class="overflow-clip rounded-t-md shadow-md dark:shadow-gray-800"
                 >
-                  <div class="relative w-full h-36 md:h-64 lg:h-72">
+                  <div class="flex h-36 w-full bg-black md:h-64 lg:h-72">
+                    <!-- Fixed height container -->
+                    <img
+                      src="public/img/image2.jpeg"
+                      alt="poto 1"
+                      class="h-full w-full object-cover"
+                    />
+                  </div>
+                  <div class="px-6 py-4 dark:bg-gray-900">
+                    <h3 class="truncate text-left">
+                      <a
+                        href="#"
+                        class="mb-1 block text-2xl font-semibold hover:text-primary dark:text-white dark:hover:text-primary"
+                        >Babequ App</a
+                      >
+                    </h3>
+                    <p
+                      class="mb-1 text-left text-base font-medium text-slate-500 dark:text-white"
+                    >
+                      Build with Laravel
+                    </p>
+                    <p class="text-left">
+                      <a
+                        href="#"
+                        class="rounded-lg bg-transparent py-3 text-left text-sm font-medium text-black underline decoration-primary decoration-2 underline-offset-8 transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg dark:text-white"
+                        >View Portfolio</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide dark:bg-gray-900">
+                <div
+                  class="overflow-clip rounded-t-md shadow-md dark:shadow-gray-800"
+                >
+                  <div class="flex h-36 w-full bg-black md:h-64 lg:h-72">
                     <!-- Fixed height container -->
                     <img
                       src="public/img/Group 9064.png"
                       alt="poto 1"
-                      class="w-full h-full object-cover"
+                      class="h-full w-full object-cover"
                     />
                   </div>
-                  <div class="py-4 px-6">
-                    <h3 class="text-left truncate">
+                  <div class="px-6 py-4 dark:bg-gray-900">
+                    <h3 class="truncate text-left">
                       <a
                         href="#"
-                        class="block mb-1 font-semibold text-2xl hover:text-primary"
+                        class="mb-1 block text-2xl font-semibold hover:text-primary dark:text-white dark:hover:text-primary"
                         >Babequ App</a
                       >
                     </h3>
                     <p
-                      class="text-left font-medium text-base text-slate-500 mb-1"
+                      class="mb-1 text-left text-base font-medium text-slate-500 dark:text-white"
                     >
                       Build with Laravel
                     </p>
                     <p class="text-left">
                       <a
                         href="#"
-                        class="text-left font-medium text-sm underline decoration-2 decoration-primary underline-offset-8 text-black bg-white py-3 rounded-lg hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out"
-                        >View Portfolio</a
-                      >
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div
-                  class="bg-white rounded-t-md shadow-md overflow-hidden mb-10"
-                >
-                  <div class="relative w-full h-36 md:h-64 lg:h-72">
-                    <img
-                      src="public/img/image2.jpeg"
-                      alt="poto 1"
-                      class="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div class="py-4 px-6">
-                    <h3 class="text-left truncate">
-                      <a
-                        href="#"
-                        class="block mb-1 font-semibold text-2xl hover:text-primary"
-                        >Babequ App</a
-                      >
-                    </h3>
-                    <p
-                      class="text-left font-medium text-base text-slate-500 mb-1"
-                    >
-                      Build with Laravel
-                    </p>
-                    <p class="text-left">
-                      <a
-                        href="#"
-                        class="text-left font-medium text-sm underline decoration-2 decoration-primary underline-offset-8 text-black bg-white py-3 rounded-lg hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out"
+                        class="rounded-lg bg-transparent py-3 text-left text-sm font-medium text-black underline decoration-primary decoration-2 underline-offset-8 transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg dark:text-white"
                         >View Portfolio</a
                       >
                     </p>
@@ -466,49 +504,59 @@
     <!-- Portfolio Section End -->
 
     <!-- Work Experiences Section Start -->
-    <section id="work" class="pt-2 lg:pt-8 pb-12">
+    <section id="work" class="bg-gray-50 pb-20 pt-16 lg:pt-20 dark:bg-gray-900">
       <div class="container">
         <div class="flex flex-wrap justify-center">
           <div class="w-full px-4">
-            <h2 class="text-4xl font-bold text-primary mb-6 text-center">
-              Work <span class="text-black">Experience</span>
+            <h2 class="mb-6 text-center text-4xl font-bold text-primary">
+              Work <span class="text-black dark:text-white">Experience</span>
             </h2>
-            <h4 class="text-base font-normal text-center">
+            <h4 class="text-center text-base font-normal dark:text-white">
               Here is a quick summary of my most recent experiences
             </h4>
-            <div class="mt-6 w-full flex justify-center mb-10">
+            <div class="mb-10 mt-6 flex w-full justify-center">
               <div
-                class="p-4 w-full lg:w-9/12 bg-slate-100 rounded-md shadow-md overflow-hidden"
+                class="w-full overflow-hidden rounded-md bg-white p-6 shadow-md lg:w-9/12 dark:bg-gray-800"
               >
-                <div class="flex flex-wrap justify-between items-start">
-                  <div class="w-24 lg:w-36 flex-shrink-0">
+                <div class="flex flex-wrap items-start justify-between">
+                  <div class="w-24 flex-shrink-0 lg:w-36">
                     <img
                       class="w-full lg:w-auto"
                       src="public/img/haus_logo.png"
                       alt=""
                     />
                   </div>
-                  <div class="w-full lg:w-1/2 mt-4 lg:mt-0 lg:pl-4">
-                    <h2 class="font-semibold">Software Engineer</h2>
-                    <h4 class="w-full text-sm tracking-tight lg:tracking-wide">
+                  <div class="mt-4 w-full lg:mt-0 lg:w-1/2 lg:pl-4">
+                    <h2 class="font-semibold dark:text-white">
+                      Software Engineer
+                    </h2>
+                    <h4
+                      class="w-full text-sm tracking-tight lg:tracking-wide dark:text-white"
+                    >
                       - Developed Inventory Control application for Haus!
                       outlets and vendors using Golang and Flutter
                     </h4>
-                    <h4 class="w-full text-sm tracking-tight lg:tracking-wide">
+                    <h4
+                      class="w-full text-sm tracking-tight lg:tracking-wide dark:text-white"
+                    >
                       - Actively participated in the development of the Haus!
                       app, with a primary focus on frontend development using
                       Flutter
                     </h4>
-                    <h4 class="w-full text-sm tracking-tight lg:tracking-wide">
+                    <h4
+                      class="w-full text-sm tracking-tight lg:tracking-wide dark:text-white"
+                    >
                       - Develop a Field Dashboard application for location
                       pinpointing through maps, with a focus on the backend
                       using Golang
                     </h4>
                   </div>
                   <div
-                    class="w-full lg:w-auto text-right lg:text-left mt-4 lg:mt-0 lg:pl-4"
+                    class="mt-4 w-full text-right lg:mt-0 lg:w-auto lg:pl-4 lg:text-left"
                   >
-                    <p class="text-xs text-left tracking-normal">
+                    <p
+                      class="text-left text-xs tracking-normal dark:text-white"
+                    >
                       Jan 2022 - Jun 2022
                     </p>
                   </div>
@@ -522,57 +570,73 @@
     <!-- Work Experiences Section End -->
 
     <!-- Contact Section Start -->
-    <section id="contact" class="pt-2 lg:pt-8 pb-36">
+    <section id="contact" class="pb-12 pt-16 lg:pt-16 dark:bg-gray-950">
       <div class="flex flex-wrap justify-center">
         <div class="w-full px-4">
-          <h4 class="text-base font-semibold text-center tracking-tighter mb-2">
+          <h4
+            class="mb-2 text-center text-base font-semibold tracking-tighter dark:text-white"
+          >
             Get In Touch
           </h4>
           <h2
-            class="text-3xl font-bold text-black mb-4 text-center tracking-tighter"
+            class="mb-4 text-center text-3xl font-bold tracking-tighter text-black dark:text-white"
           >
             Let's Discuss Your <span class="text-primary">Project</span>
           </h2>
-          <h4 class="text-base font-normal text-center tracking-normal mb-2">
+          <h4
+            class="mb-2 text-center text-base font-normal tracking-normal dark:text-white"
+          >
             Let’s make something new, different and more meaningful or make
             thing more visual or conceptual
           </h4>
-          <div class="mt-6 w-full lg:w-8/12 mb-10 mx-auto">
+          <div class="mx-auto mb-10 mt-6 w-full lg:w-8/12">
             <div
-              class="p-4 w-full overflow-hidden space-y-3 flex flex-col md:flex-row md:space-x-3 lg:flex-row lg:space-x-3 md:space-y-0 lg:space-y-0 items-center md:items-start lg:items-start justify-center md:justify-between lg:justify-between"
+              class="flex w-full flex-col items-center justify-center space-y-3 overflow-hidden p-4 md:flex-row md:items-start md:justify-between md:space-x-3 md:space-y-0 lg:flex-row lg:items-start lg:justify-between lg:space-x-3 lg:space-y-0"
             >
               <div
-                class="p-5 w-4/5 lg:w-1/3 bg-slate-200 rounded-xl shadow-lg flex items-center space-x-5"
+                class="flex w-4/5 items-center space-x-5 rounded-xl bg-slate-200 p-5 shadow-lg lg:w-1/3 dark:bg-gray-900"
               >
-                <img class="w-10 h-10" src="public/img/call_logo.png" alt="" />
+                <img class="h-10 w-10" src="public/img/call_logo.png" alt="" />
 
                 <div>
-                  <div class="text-lg font-medium text-black">Call Me</div>
-                  <p class="text-slate-500 text-md tracking-tight">
+                  <div class="text-lg font-medium text-black dark:text-white">
+                    Call Me
+                  </div>
+                  <p
+                    class="text-md tracking-tight text-slate-500 dark:text-white"
+                  >
                     +6285903629847
                   </p>
                 </div>
               </div>
               <div
-                class="p-5 w-4/5 lg:w-1/3 bg-slate-200 rounded-xl shadow-lg flex items-center space-x-5 overflow-hidden"
+                class="flex w-4/5 items-center space-x-5 overflow-hidden rounded-xl bg-slate-200 p-5 shadow-lg lg:w-1/3 dark:bg-gray-900"
               >
-                <img class="w-10 h-10" src="public/img/email_logo.png" alt="" />
+                <img class="h-10 w-10" src="public/img/email_logo.png" alt="" />
 
                 <div>
-                  <div class="text-lg font-medium text-black">Email Me</div>
-                  <p class="text-slate-500 text-md tracking-tighter">
+                  <div class="text-lg font-medium text-black dark:text-white">
+                    Email Me
+                  </div>
+                  <p
+                    class="text-md tracking-tighter text-slate-500 dark:text-white"
+                  >
                     irsyadabqori@gmail.com
                   </p>
                 </div>
               </div>
               <div
-                class="p-5 w-4/5 lg:w-1/3 bg-slate-200 rounded-xl shadow-lg flex items-center space-x-5"
+                class="flex w-4/5 items-center space-x-5 rounded-xl bg-slate-200 p-5 shadow-lg lg:w-1/3 dark:bg-gray-900"
               >
-                <img class="w-10 h-10" src="public/img/loc_logo.png" alt="" />
+                <img class="h-10 w-10" src="public/img/loc_logo.png" alt="" />
 
                 <div>
-                  <div class="text-lg font-medium text-black">Address</div>
-                  <p class="text-slate-500 text-md tracking-tight">
+                  <div class="text-lg font-medium text-black dark:text-white">
+                    Address
+                  </div>
+                  <p
+                    class="text-md tracking-tight text-slate-500 dark:text-white"
+                  >
                     Purwakarta, 🇮🇩
                   </p>
                 </div>
@@ -585,9 +649,35 @@
     <!-- Form Contact Section End -->
 
     <!-- Footer Section Start -->
-     <footer>
-       
-     </footer>
+    <footer class="bg-slate-100 pb-12 pt-12 dark:bg-gray-900">
+      <div class="container">
+        <div class="flex flex-wrap justify-between">
+          <div
+            class="flex max-h-24 w-full flex-col items-center justify-between border-t border-slate-600 pt-10 md:flex-row"
+          >
+            <div
+              class="text-md mb-4 w-full text-center font-normal tracking-normal md:mb-0 md:w-auto md:text-left dark:text-white"
+            >
+              @ 2024. All Rights Reserved
+            </div>
+            <div
+              class="flex items-center justify-center space-x-2 md:justify-end"
+            >
+              <img
+                src="public/img/linkedin_logo.png"
+                alt="LinkedIn"
+                class="h-10 w-10"
+              />
+              <img
+                src="public/img/ig_logo.png"
+                alt="Instagram"
+                class="h-10 w-10"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
     <!-- Footer Section End -->
 
     <script src="src/js/script.js"></script>
